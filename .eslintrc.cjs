@@ -14,6 +14,7 @@ module.exports = {
     'semi': ['error', 'always'],
     'object-curly-spacing': ["error", "always"],
     '@typescript-eslint/explicit-function-return-type': 'error',
+    "@typescript-eslint/no-explicit-any": "off",
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
