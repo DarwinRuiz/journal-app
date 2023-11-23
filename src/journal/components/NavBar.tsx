@@ -2,6 +2,7 @@ import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
 import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { startSignOut } from '../../store/auth/thunks';
+import { clearNotesSignOut } from '../../store/journal/journalSlice';
 
 interface Props {
     drawerWidth: number
@@ -13,6 +14,7 @@ export const NavBar = ({ drawerWidth }: Props): JSX.Element => {
 
     const onSignOut = (): void => {
         dispatch(startSignOut());
+        dispatch(clearNotesSignOut());
     };
 
     return (
